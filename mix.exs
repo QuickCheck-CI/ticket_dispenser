@@ -5,7 +5,7 @@ defmodule TicketDispenser.Mixfile do
     [app: :ticket_dispenser,
      version: "0.0.1",
 		 test_pattern: "*_{test,eqc}.exs",
-     elixir: "~> 1.1-dev",
+     elixir: "~> 1.0",
      deps: deps]
   end
 
