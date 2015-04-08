@@ -1,1 +1,1 @@
-{build, “elixir -v ; mix deps.get; mix test"}.
+{build, “mix deps.get; mix test"}.
