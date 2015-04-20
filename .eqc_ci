@@ -1,1 +1,2 @@
 {build, "mix deps.get; mix test"}.
+{test_path, "_build/test/lib/ticket_dispenser/ebin"}.
