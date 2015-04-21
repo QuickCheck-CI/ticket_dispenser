@@ -16,7 +16,7 @@ defmodule TicketDispenser.Mixfile do
     [applications: [:logger]]
   end
 
-  defp deps(:test), do: [{:eqc_ex, "~> 1.2"}]
+  defp deps(:test), do: [{:eqc_ex, "~> 1.2.1"}]
   defp deps(_), do: []
   
 end
