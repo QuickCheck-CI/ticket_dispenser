@@ -5,9 +5,9 @@ defmodule TicketDispenser_eqc do
 
   
 
-	alias :ticket_dispenser, as: SUT
+	#alias :ticket_dispenser, as: SUT
 	#alias TicketDispenser, as: SUT
-	#alias TicketAgent, as: SUT
+	alias TicketAgent, as: SUT
 
 	def initial_state() do 0 end
 	
