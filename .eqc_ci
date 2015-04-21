@@ -1,2 +1,3 @@
-{build, "mix deps.get; mix test"}.
+{build, "mix deps.get ; MIX_ENV=test mix eqcci"}.
 {test_path, "_build/test/lib/ticket_dispenser/ebin"}.
+{deps, "_build/dev/lib/eqc_ex/ebin"}.
