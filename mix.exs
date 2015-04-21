@@ -4,9 +4,9 @@ defmodule TicketDispenser.Mixfile do
   def project do
     [app: :ticket_dispenser,
      version: "0.0.1",
-		 test_pattern: "*_{test,eqc}.exs",
+     test_pattern: "*_{test,eqc}.exs",
      elixir: "~> 1.0",
-     deps: deps]
+     deps: deps(Mix.env) ]
   end
 
   # Configuration for the OTP application
@@ -16,7 +16,7 @@ defmodule TicketDispenser.Mixfile do
     [applications: [:logger]]
   end
 
-  defp deps do
-    [{:eqc_ex, "~> 1.2"}]
-  end
+  defp deps(:test), do: [{:eqc_ex, "~> 1.2"}]
+  defp deps(_), do: []
+  
 end
