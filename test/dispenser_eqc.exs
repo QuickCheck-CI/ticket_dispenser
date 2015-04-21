@@ -21,13 +21,13 @@ defmodule TicketDispenser_eqc do
 #	def reset_post(_state, [_pid], result) do	eq(result, 0) end
 
 ## take command
-	def take_args(_state) do [var: :pid] end
+	def take_args(_state), do: [var: :pid] 
 
-	def take(pid) do SUT.take(pid) end
+	def take(pid), do: SUT.take(pid)
 
-	def take_next(state, _var, [_pid]) do state+1 end
+	def take_next(state, _var, [_pid]), do: state+1 
 	
-	def take_post(state, [_pid], result) do eq(result, state+1) end
+	def take_post(state, [_pid], result), do: eq(result, state+1) 
 
 
 #	weight state,
