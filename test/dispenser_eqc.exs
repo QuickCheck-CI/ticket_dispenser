@@ -3,22 +3,21 @@ defmodule TicketDispenser_eqc do
 	use EQC.ExUnit
 	use EQC.StateM
 
-  
-
-	#alias :ticket_dispenser, as: SUT
+ 
+	alias :ticket_dispenser, as: SUT
 	#alias TicketDispenser, as: SUT
-	alias TicketAgent, as: SUT
+	#alias TicketAgent, as: SUT
 
 	def initial_state() do 0 end
 	
 ## reset command
-	def reset_args(_state) do [var: :pid] end
+	def reset_args(_state), do: [var: :pid]
+    
+	def reset(pid), do: SUT.reset(pid)
 
-	def reset(pid) do SUT.reset(pid) end
-
-	def reset_next(_state, _var, [_pid]) do 0 end
+	def reset_next(_state, _var, [_pid]), do: 0
 	
-#	def reset_post(_state, [_pid], result) do	eq(result, 0) end
+#	def reset_post(_state, [_pid], result), do:	eq(result, 0)
 
 ## take command
 	def take_args(_state), do: [var: :pid] 
