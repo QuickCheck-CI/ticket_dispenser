@@ -3,6 +3,8 @@ defmodule TicketDispenser_eqc do
 	use EQC.ExUnit
 	use EQC.StateM
 
+  
+
 	#alias :ticket_dispenser, as: SUT
 	#alias TicketDispenser, as: SUT
 	alias TicketAgent, as: SUT
@@ -32,7 +34,7 @@ defmodule TicketDispenser_eqc do
 #	   take: 10,
 #    reset: state
   	
-	property "random ticket sequence" do
+	property "random_ticket_sequence" do
 		forall cmds <- parallel_commands(__MODULE__) do
 			{:ok, pid} = SUT.start()
 			run_result =
