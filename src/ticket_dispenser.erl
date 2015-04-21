@@ -3,7 +3,7 @@
 -export([start/0, stop/1, reset/1, take/1]).
 
 start() ->
-  spawn(fun() -> run(0) end).
+  {ok, spawn(fun() -> run(0) end)}.
 
 stop(Pid) ->
   Pid ! {stop, self()},
