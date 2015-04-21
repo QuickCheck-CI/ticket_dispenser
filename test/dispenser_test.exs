@@ -1,6 +1,5 @@
 defmodule StateTest do
   use ExUnit.Case
-  use EQC.ExUnit
 
 #	alias :ticket_dispenser, as: SUT
   alias TicketDispenser, as: SUT
